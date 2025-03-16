@@ -10,11 +10,15 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@emailjs/browser": "^4.4.1",
+    "aceternity-ui": "^0.2.2",
     "codequad-landingpage": "file:",
     "framer-motion": "^12.5.0",
     "lucide-react": "^0.482.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+    "react-sketch-canvas": "^6.2.0",
+    "shadcn": "^2.3.0",
     "styled-components": "^6.1.15"
   },
   "devDependencies": {

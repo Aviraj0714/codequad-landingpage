@@ -6,41 +6,41 @@ import HeroSection from './components/HeroSection';
 import FeatureCard from './components/FeatureCard';
 import ContactForm from './components/ContactForm';
 import TeamMember from './components/TeamMember';
-
+import avirajImage from './assets/photo.jpg';
 function App() {
   const teamMembers = [
     {
-      name: "Alex Chen",
-      role: "Senior Software Engineer",
-      image: "https://source.unsplash.com/random/400x400?developer&sig=1",
-      bio: "Full-stack developer with expertise in AI and cloud architecture",
+      name: "Aviraj Bhaliya",
+      role: "Mern Stack Developer",
+      image: avirajImage,
+      bio: "Passionate Full-Stack Developer building futuristic web solutions with AI-powered innovation.",
       github: "https://github.com",
       portfolio: "https://portfolio.dev",
       twitter: "https://twitter.com",
       linkedin: "https://linkedin.com",
-      technologies: ["React", "Node.js", "Python", "AWS"]
+      technologies: ["React", "Next.js", "Express", "MongoDB"]
     },
     {
-      name: "Sarah Miller",
-      role: "AI Specialist",
-      image: "https://source.unsplash.com/random/400x400?developer&sig=2",
-      bio: "Machine learning expert focused on code analysis and optimization",
+      name: "Harsh Deradi",
+      role: "Fullstack Developer",
+      image: "https://avatars.githubusercontent.com/u/75111484?v=4",
+      bio: "Bridging frontend elegance with backend power to create seamless applications.",
       github: "https://github.com",
       portfolio: "https://portfolio.dev",
       twitter: "https://twitter.com",
       linkedin: "https://linkedin.com",
-      technologies: ["TensorFlow", "PyTorch", "Java", "Docker"]
+      technologies: ["React", "Node.js", "Python", "C++"]
     },
     {
-      name: "James Wilson",
-      role: "DevOps Engineer",
-      image: "https://source.unsplash.com/random/400x400?developer&sig=3",
-      bio: "Infrastructure and automation specialist with security focus",
+      name: "Khushi Patel",
+      role: "Fullstack Developer",
+      image: "https://media.licdn.com/dms/image/v2/D4D03AQFc7xveF8Cm1g/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1719015378671?e=1747872000&v=beta&t=zqABsr9glqsxKhvNh50Im88TIdrV4dIALQkrYlaqvLg",
+      bio: "Turning ideas into reality with modern web development and AI-powered solutions.",
       github: "https://github.com",
       portfolio: "https://portfolio.dev",
       twitter: "https://twitter.com",
       linkedin: "https://linkedin.com",
-      technologies: ["Kubernetes", "Terraform", "Go", "Azure"]
+      technologies: ["React", "SQL", "Express", "Node.js"]
     }
   ];
 
@@ -124,10 +124,17 @@ function App() {
                 </div>
               </div>
               <div className="flex-1">
-                <div className="aspect-video bg-black/50 rounded-xl p-4 animate-float border border-gray-800">
-                  <div className="h-full border-2 border-primary/50 rounded-lg"></div>
-                </div>
-              </div>
+  <div className="aspect-video bg-black/50 rounded-xl p-4 border border-gray-800">
+    <video 
+      className="w-full h-full border-2 border-primary/50 rounded-lg"
+      src="https://dnznrvs05pmza.cloudfront.net/bda77e2c-9961-4e0c-87db-f814d069f445.mp4?_jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrZXlIYXNoIjoiZTg1MGZiOWYxNTk3NjMwMiIsImJ1Y2tldCI6InJ1bndheS10YXNrLWFydGlmYWN0cyIsInN0YWdlIjoicHJvZCIsImV4cCI6MTc0MjI1NjAwMH0.6NBjmLlszh4uZh1CDaUHbAjgqO3ecfyj4bCKArNGKG0" 
+      autoPlay 
+      loop 
+      muted 
+      playsInline
+    />
+  </div>
+</div>
             </div>
           </motion.div>
         </div>
