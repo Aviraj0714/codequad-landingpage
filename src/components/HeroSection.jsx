@@ -19,7 +19,7 @@ const HeroSection = () => {
     setIsLoading(true);
     setTimeout(() => {
       window.location.href = 'https://code-quad.netlify.app/';
-    }, 5500);
+    }, 2500);
   };
 
   return (
