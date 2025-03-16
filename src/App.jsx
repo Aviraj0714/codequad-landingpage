@@ -93,7 +93,7 @@ function App() {
             whileInView={{ opacity: 1, y: 0 }}
             className="text-4xl font-bold text-center mb-16 bg-clip-text text-transparent bg-gradient-to-r from-primary via-purple-500 to-accent"
           >
-            Meet Our Team
+            Meet Our Team - QuadVerse
           </motion.h2>
           
           <div className="grid md:grid-cols-3 gap-8">
