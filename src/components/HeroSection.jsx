@@ -101,7 +101,7 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.6 }}
-            className="flex flex-col sm:flex-row gap-4 justify-center"
+            className="flex gap-4 justify-center"
           >
             {/* Get Started Button - Uses animated button & triggers loader */}
             <div onClick={handleRedirect}>
