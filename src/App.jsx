@@ -7,6 +7,7 @@ import FeatureCard from './components/FeatureCard';
 import ContactForm from './components/ContactForm';
 import TeamMember from './components/TeamMember';
 import avirajImage from './assets/photo.jpg';
+import video from './assets/video.mp4';
 function App() {
   const teamMembers = [
     {
@@ -127,7 +128,7 @@ function App() {
   <div className="aspect-video bg-black/50 rounded-xl p-4 border border-gray-800">
     <video 
       className="w-full h-full border-2 border-primary/50 rounded-lg"
-      src="https://dnznrvs05pmza.cloudfront.net/bda77e2c-9961-4e0c-87db-f814d069f445.mp4?_jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrZXlIYXNoIjoiZTg1MGZiOWYxNTk3NjMwMiIsImJ1Y2tldCI6InJ1bndheS10YXNrLWFydGlmYWN0cyIsInN0YWdlIjoicHJvZCIsImV4cCI6MTc0MjI1NjAwMH0.6NBjmLlszh4uZh1CDaUHbAjgqO3ecfyj4bCKArNGKG0" 
+      src={video} 
       autoPlay 
       loop 
       muted 
