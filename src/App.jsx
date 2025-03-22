@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Code2, Terminal, Users, Github as Git, Pencil, Send, Github, Twitter, Linkedin, Globe, Mail } from 'lucide-react';
+import { Code2, Terminal, Users, Github as Git, PencilRuler, Workflow, MessageCircle, ListTodo, Github, Twitter, Linkedin } from 'lucide-react';
 import Navbar from './components/Navbar';
 import HeroSection from './components/HeroSection';
 import FeatureCard from './components/FeatureCard';
@@ -8,11 +8,12 @@ import ContactForm from './components/ContactForm';
 import TeamMember from './components/TeamMember';
 import avirajImage from './assets/photo.jpg';
 import video from './assets/video.mp4';
+
 function App() {
   const teamMembers = [
     {
       name: "Aviraj Bhaliya",
-      role: "Mern Stack Developer",
+      role: "MERN Stack Developer",
       image: avirajImage,
       bio: "Passionate Full-Stack Developer building futuristic web solutions with AI-powered innovation.",
       github: "https://github.com",
@@ -51,136 +52,108 @@ function App() {
       <HeroSection />
       
       {/* Features Section */}
-      <section className="py-20 px-4 md:px-8 bg-black/30">
+      <motion.section 
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        className="py-20 px-4 md:px-8 bg-black/30"
+      >
         <div className="max-w-7xl mx-auto">
-          <motion.h2 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            className="text-4xl font-bold text-center mb-16 bg-clip-text text-transparent bg-gradient-to-r from-primary via-purple-500 to-accent"
-          >
-            Powerful Features
-          </motion.h2>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <h2 className="text-4xl font-bold text-center mb-16 bg-clip-text text-transparent bg-gradient-to-r from-primary via-purple-500 to-accent">
+            Why Choose CodeQuad? 🚀
+          </h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <FeatureCard 
               icon={<Code2 className="w-8 h-8 text-primary" />}
-              title="AI Code Review"
-              description="Advanced code analysis powered by cutting-edge AI technology"
+              title="AI-Powered Code Review"
+              description="Analyze and improve your code quality with AI-driven insights and smart suggestions."
             />
             <FeatureCard 
               icon={<Terminal className="w-8 h-8 text-primary" />}
-              title="Code Execution"
-              description="Real-time code execution with instant feedback"
+              title="Real-Time Code Execution"
+              description="Run and debug code instantly with an integrated execution environment."
             />
             <FeatureCard 
               icon={<Users className="w-8 h-8 text-primary" />}
-              title="Collaboration"
-              description="Seamless team collaboration with real-time updates"
+              title="Seamless Collaboration"
+              description="Chat, share files, and work together using interactive flowcharts and drawing tools."
             />
             <FeatureCard 
               icon={<Git className="w-8 h-8 text-primary" />}
               title="Version Control"
-              description="Integrated version control with smart branching"
+              description="Integrated Git-based version control for smooth project tracking and management."
+            />
+            <FeatureCard 
+              icon={<Workflow className="w-8 h-8 text-primary" />}
+              title="JIRA-Style Task Board"
+              description="Plan, manage, and track your development tasks with an advanced task board."
+            />
+            <FeatureCard 
+              icon={<PencilRuler className="w-8 h-8 text-primary" />}
+              title="Wireframe to Code (FrameForge)"
+              description="Convert your wireframe sketches into working code with AI-powered automation."
             />
           </div>
         </div>
-      </section>
+      </motion.section>
 
-      {/* About Section */}
-      <section className="py-20 px-4 md:px-8 bg-black/50">
+      {/* FrameForge - Wireframe to Code Section */}
+      <motion.section
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        className="py-20 px-4 md:px-8 bg-black/50"
+      >
+        <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-8">
+          <div className="flex-1">
+            <h2 className="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent mb-4">
+              FrameForge: Wireframe to Code
+            </h2>
+            <p className="text-gray-300 mb-6">
+              Draw your wireframes and instantly convert them into production-ready code. FrameForge is an AI-driven feature that accelerates your UI/UX workflow, allowing developers to build prototypes seamlessly.
+            </p>
+          </div>
+          <div className="flex-1">
+            <div className="aspect-video bg-black/50 rounded-xl p-4 border border-gray-800">
+              <video 
+                className="w-full h-full border-2 border-primary/50 rounded-lg"
+                src={video} 
+                autoPlay 
+                loop 
+                muted 
+                playsInline 
+                loading="lazy"
+              />
+            </div>
+          </div>
+        </div>
+      </motion.section>
+
+      {/* Meet the Team - QuadVerse */}
+      <motion.section
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        className="py-20 px-4 md:px-8 bg-black/50"
+      >
         <div className="max-w-7xl mx-auto">
-          <motion.h2 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            className="text-4xl font-bold text-center mb-16 bg-clip-text text-transparent bg-gradient-to-r from-primary via-purple-500 to-accent"
-          >
+          <h2 className="text-4xl font-bold text-center mb-16 bg-clip-text text-transparent bg-gradient-to-r from-primary via-purple-500 to-accent">
             Meet Our Team - QuadVerse
-          </motion.h2>
-          
+          </h2>
           <div className="grid md:grid-cols-3 gap-8">
             {teamMembers.map((member, index) => (
               <TeamMember key={index} {...member} />
             ))}
           </div>
         </div>
-      </section>
-
-      {/* Wireframe Section */}
-      <section className="py-20 px-4 md:px-8 bg-black/30">
-        <div className="max-w-7xl mx-auto">
-          <motion.div 
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            className="bg-gradient-to-r from-primary/10 to-accent/10 p-8 rounded-2xl border border-gray-800"
-          >
-            <div className="flex flex-col md:flex-row items-center gap-8">
-              <div className="flex-1">
-                <h2 className="text-3xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent">Wireframe & Drawing Mode</h2>
-                <p className="text-gray-300 mb-6">
-                  Create stunning wireframes and collaborate in real-time with our advanced drawing tools.
-                </p>
-                <div className="flex items-center gap-4">
-                  <Pencil className="w-6 h-6 text-accent" />
-                  <span>Real-time collaboration</span>
-                </div>
-              </div>
-              <div className="flex-1">
-  <div className="aspect-video bg-black/50 rounded-xl p-4 border border-gray-800">
-    <video 
-      className="w-full h-full border-2 border-primary/50 rounded-lg"
-      src={video} 
-      autoPlay 
-      loop 
-      muted 
-      playsInline
-    />
-  </div>
-</div>
-            </div>
-          </motion.div>
-        </div>
-      </section>
+      </motion.section>
 
       {/* Contact Section */}
       <ContactForm />
 
       {/* Footer */}
-      <footer className="bg-black py-12 px-4 md:px-8 border-t border-gray-800">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid md:grid-cols-4 gap-8">
-            <div>
-              <h3 className="text-xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent">CodeQuad</h3>
-              <p className="text-gray-400">The Ultimate Dev Hub for modern development teams.</p>
-            </div>
-            <div>
-              <h4 className="font-semibold mb-4">Quick Links</h4>
-              <ul className="space-y-2 text-gray-400">
-                <li className="hover:text-primary transition-colors cursor-pointer">Features</li>
-                <li className="hover:text-primary transition-colors cursor-pointer">About</li>
-                <li className="hover:text-primary transition-colors cursor-pointer">Contact</li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="font-semibold mb-4">Resources</h4>
-              <ul className="space-y-2 text-gray-400">
-                <li className="hover:text-primary transition-colors cursor-pointer">Documentation</li>
-                <li className="hover:text-primary transition-colors cursor-pointer">Blog</li>
-                <li className="hover:text-primary transition-colors cursor-pointer">Support</li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="font-semibold mb-4">Connect</h4>
-              <div className="flex gap-4">
-                <Github className="w-6 h-6 hover:text-primary transition-colors cursor-pointer" />
-                <Twitter className="w-6 h-6 hover:text-primary transition-colors cursor-pointer" />
-                <Linkedin className="w-6 h-6 hover:text-primary transition-colors cursor-pointer" />
-              </div>
-            </div>
-          </div>
-          <div className="mt-12 pt-8 border-t border-gray-800 text-center text-gray-400">
-            <p>&copy; 2025 CodeQuad by QuadVerse. All rights reserved.</p>
-          </div>
-        </div>
+      <footer className="bg-black py-12 px-4 md:px-8 border-t border-gray-800 text-center text-gray-400">
+        <p>&copy; 2025 CodeQuad by QuadVerse. All rights reserved.</p>
       </footer>
     </div>
   );
